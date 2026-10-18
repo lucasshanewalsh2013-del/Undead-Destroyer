@@ -71,7 +71,7 @@ func NewGame(playerImg, bulletImg, zombieImg, bigZombieImg *ebiten.Image) *Game 
 		DirX:               1,
 		DirY:               0,
 		PlayerHealth:       5,
-		SpawnTimeLeft:      120.0,
+		SpawnTimeLeft:      99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
 		TimeUntilBigZombie: 30.0,
 	}
 }
