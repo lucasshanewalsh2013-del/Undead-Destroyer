@@ -136,7 +136,7 @@ func (g *Game) Update() error {
 	}
 
 	// Shoot every second.
-	g.ShootTimer += 3.0 / 60.0
+	g.ShootTimer += 2.5 / 60.0
 	if g.ShootTimer >= 1.0 {
 		g.ShootTimer = 0
 		g.spawnBullet()
@@ -145,7 +145,7 @@ func (g *Game) Update() error {
 	// Spawn regular zombies for the first two minutes.
 	if g.SpawnTimeLeft > 0 {
 		g.SpawnTimeLeft -= 1.0 / 60.0
-		g.ZombieTimer += 1.0 / 60.0
+		g.ZombieTimer += 1.25 / 60.0
 
 		if g.ZombieTimer >= 2.0 {
 			g.ZombieTimer = 0
@@ -161,7 +161,7 @@ func (g *Game) Update() error {
 	}
 
 	// Zombies move toward the player.
-	const zombieSpeed = 0.5
+	const zombieSpeed = 0.8
 
 	for _, z := range g.Zombies {
 		if !z.Active {
